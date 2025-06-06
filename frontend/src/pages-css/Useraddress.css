@@ -1,0 +1,158 @@
+/* Useraddress.css */
+
+.ua-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.ua-form {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.ua-title {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ua-form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ua-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 8px;
+}
+
+.ua-input,
+.ua-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.ua-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.ua-input:focus,
+.ua-textarea:focus {
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    outline: none;
+}
+
+.ua-input::placeholder,
+.ua-textarea::placeholder {
+    color: #a0aec0;
+}
+
+.ua-input-error {
+    border-color: #ff4444;
+    background-color: rgba(255, 68, 68, 0.03);
+    animation: shake 0.3s ease-in-out;
+}
+
+.ua-error-text {
+    display: block;
+    color: #ff4444;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ua-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+}
+
+.ua-submit-btn:hover {
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+    transform: translateY(-1px);
+}
+
+.ua-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .ua-container {
+        padding: 15px;
+    }
+
+    .ua-form {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .ua-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .ua-form-group {
+        margin-bottom: 16px;
+    }
+
+    .ua-input,
+    .ua-textarea {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .ua-submit-btn {
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+
+/* Animation for error messages */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.ua-input-error {
+    animation: shake 0.3s ease-in-out;
+}
+

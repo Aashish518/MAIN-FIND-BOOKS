@@ -1,0 +1,127 @@
+/* General Container Styling */
+.admin-category-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .addcat,.addsubcat{
+    margin-top: 4%;
+  }
+
+  /* Heading Styling */
+  .adminh2{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5%;
+  }
+
+  h3 {
+    margin-top: 2%;
+    font-size: 20px;
+    color: #555;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8%;
+  }
+  
+  /* Input Fieds */
+  .catinput, .subinput , select {
+    width: 60%;
+    margin: 3% 0 0 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  input:focus, select:focus {
+    border-color: #ff5722;
+    outline: none;
+  }
+  
+  .addcat {
+    font-size: 1rem;
+    padding: 8px 13px;
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* Optional: Removes default border */
+    background-color: #333; /* Optional: Adds a dark background */
+    color: white; /* Optional: Sets text color */
+    cursor: pointer; /* Makes it clear it's clickable */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+  
+  .addcat:hover {
+    background: linear-gradient(45deg,#ff5722, #ff9800 );
+  }
+
+  .addsubcat{
+    font-size: 1rem;
+    padding: 8px 13px;
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* Optional: Removes default border */
+    background-color: #333; /* Optional: Adds a dark background */
+    color: white; /* Optional: Sets text color */
+    cursor: pointer; /* Makes it clear it's clickable */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .addsubcat:hover {
+    background: linear-gradient(45deg,#ff5722, #ff9800 );
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admin-category-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    input, select, button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .admin-category-container {
+      width: 80%;
+      margin-top: 15%;
+      padding: 10px;
+    }
+  
+    input, select, button {
+      font-size: 14px;
+      padding: 6px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    h3 {
+      font-size: 16px;
+    }
+  }
+  

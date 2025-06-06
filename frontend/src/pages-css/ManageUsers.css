@@ -1,0 +1,194 @@
+.users-page {
+    padding: 2% 5%;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    width : 100%;
+    background-color:rgba(240,240,255,255);
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .users-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    padding: 1% 3%;
+  }
+
+  .users-card::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .card-content {
+    padding-left: 10px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between center;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 40%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  
+  .add-user {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 2%;
+  }
+  
+  .add-user:hover {
+    background-color: #0056b3;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures border-radius applies */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+}
+
+/* Add a border to each cell */
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Table header styling */
+.user-table th {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #0056b3;
+    padding: 15px;
+}
+
+/* Alternating row colors for better readability */
+.user-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.2); /* Light blue on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Actions button container */
+.actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Style the action buttons */
+.edit-btn, .delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+  .centered {
+    text-align: center;
+  }  
+  
+  .user-row:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .user-row:hover {
+    background-color: #e2e6ea;
+  }
+  
+  
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .search-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .user-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .actions {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  

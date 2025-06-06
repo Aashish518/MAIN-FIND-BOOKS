@@ -1,0 +1,123 @@
+/* AboutUs.css */
+.about-us-container {
+    background-color: black;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-us-header h1 {
+    color: #e7ede7;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about-us-sections {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    padding-left: 4%;
+}
+
+.about-us-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 350px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.about-us-section p{
+    font-size: 0.9rem;
+}
+
+.shop {
+    padding-left: 7%;
+}
+
+.about-us-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-align: left;
+    color: whitesmoke;
+    font-weight: 700;
+    border-bottom: white solid 1px;
+    padding-bottom: 5px;
+}
+
+.about-us-section ul {
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.about-us-section a {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+}
+
+.read-more-btn {
+    padding: 8px 16px;
+    border: 1px solid #9acd32;
+    background: none;
+    color: #9acd32;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.read-more-btn:hover {
+    background-color: #9acd32;
+    color: #fff;
+}
+
+.about-us-footer-bottom {
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.about-us-footer-bottom strong {
+    color: #9acd32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us-sections {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .about-us-section {
+        /* max-width: 100%; */
+        text-align: center;
+        padding: 10px;
+    }
+    .about-us-section h2{
+        text-align: center;
+    }
+
+    .shop {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-header h1 {
+        font-size: 20px;
+    }
+
+    .about-us-section h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .read-more-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}

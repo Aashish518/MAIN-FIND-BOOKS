@@ -1,0 +1,262 @@
+/* General Page Styles */
+.products-page {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: rgba(240, 240, 255, 255);
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.resell-strip {
+  background-color: #f0ad4e; /* Warning color */
+  color: white;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Search Input */
+.search-input {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Add Product Button */
+.add-product {
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+
+.add-product:hover {
+    background-color: #0056b3;
+}
+
+/* Product Table Container */
+.books-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Product Table */
+/* Product Table */
+.product-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    border-bottom: 2px solid #ddd;
+    table-layout: fixed; /* Ensures equal width for all columns */
+}
+
+/* Table Header & Cells */
+.product-table th,
+.product-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    font-size: 1rem;
+    width: 1%; /* Ensures equal distribution */
+}
+
+/* Table Header */
+.product-table th {
+    background-color: #007bff;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Table Rows */
+.product-table tbody tr {
+    background-color: white;
+    transition: background 0.3s ease;
+}
+
+.product-table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Ensure Visible Borders */
+.product-table th,
+.product-table td {
+    border-bottom: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+}
+
+.product-table th:last-child,
+.product-table td:last-child {
+    border-right: none;
+}
+
+/* Book Image */
+.bookImage {
+    width: 100px;
+    height: 120px;
+    object-fit: fill;
+    border-radius: 4px;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Buttons */
+.edit-btn,
+.delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products-page {
+        padding: 10px;
+    }
+
+    .books-card {
+        padding: 15px;
+    }
+
+    .product-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .bookImage {
+        width: 80px;
+        height: 100px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .search-input {
+        max-width: 100%;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .bookImage {
+        width: 60px;
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .products-page {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .books-card {
+        max-width: 100%;
+    }
+    
+    .product-table {
+        max-width: 100%;
+    }
+}

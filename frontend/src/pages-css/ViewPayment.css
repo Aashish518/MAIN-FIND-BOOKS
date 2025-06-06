@@ -1,0 +1,186 @@
+/* ===== Payments Container ===== */
+.payment-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* ===== Heading Styles ===== */
+.payment-container h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* ===== Search Input ===== */
+.paymentsearch-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 0 auto 20px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.paymentsearch-input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* ===== Table Wrapper for Scrollable Content ===== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+/* ===== Payments Table Styling ===== */
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    border: 2px solid #ccc; /* Table outer border */
+}
+
+/* ===== Table Header ===== */
+.payment-table th {
+    background: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    text-align: center;
+    border: 2px solid #ccc; /* Added border */
+    white-space: nowrap;
+}
+
+/* ===== Table Rows ===== */
+.payment-table td {
+    font-size: 14px;
+    color: #333;
+    padding: 12px;
+    text-align: center;
+    border: 2px solid #ccc; /* Added border */
+    white-space: nowrap;
+}
+
+/* ===== Zebra Striping for Readability ===== */
+.payment-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* ===== Hover Effect for Rows ===== */
+.payment-table tbody tr:hover {
+    background: #e9f2ff;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ===== Action Buttons ===== */
+.payment-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.payment-edit-btn,
+.payment-delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.payment-edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.payment-edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.payment-delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.payment-delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* ===== Responsive Styles ===== */
+@media screen and (max-width: 768px) {
+    .payment-container {
+        padding: 15px;
+    }
+
+    .payment-container h2 {
+        font-size: 22px;
+    }
+
+    .paymentsearch-input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .payment-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .payment-table th,
+    .payment-table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .payment-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .payment-container h2 {
+        font-size: 20px;
+    }
+
+    .paymentsearch-input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .table-wrapper {
+        border-radius: 5px;
+    }
+
+    .payment-table th,
+    .payment-table td {
+        font-size: 11px;
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .payment-container {
+        max-width: 1400px;
+    }
+}

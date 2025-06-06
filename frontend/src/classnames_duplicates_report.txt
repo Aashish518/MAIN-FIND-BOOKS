@@ -1,0 +1,5 @@
+order-details :- deliverydetail , reselldeliverydetail
+submit-btn :- paymentform , resllerpaymentform , useraddress , adminedituser 
+submit-button :- deliverdetail , forgotpassword , login , reselldeliverydetail
+
+button affected by :- login.jsx page

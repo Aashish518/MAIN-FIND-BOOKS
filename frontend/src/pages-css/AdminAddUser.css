@@ -1,0 +1,108 @@
+.add-user-container {
+  width: 100vh;
+  padding: 20px;
+  margin: 3% auto;
+  height: 100vh;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 92vh; /* Align content to the left */
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  margin-left: 38%;
+}
+
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align form fields to the left */
+  width: 100%;
+  height: 80vh;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #555;
+  width: 120px; /* Adjust label width for proper alignment */
+  text-align: left;
+}
+
+.form-group input,
+.form-group select {
+  width: 300px; /* Adjust input width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff5722;
+  outline: none;
+}
+
+.submit-btn {
+  width: 300px;
+  padding: 10px;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  margin-left: 17%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+  /* margin-left: 18%; */
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .add-user-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .form-group {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .form-group label {
+      width: auto;
+      margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select {
+      width: 100%;
+  }
+}

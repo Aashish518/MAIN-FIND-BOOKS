@@ -1,0 +1,191 @@
+/* General Styling */
+.delivery-detail-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.delivery-detail-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-detail-card h2 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.delivery-detail-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* OTP Verification Section */
+.otp-verification {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.otp-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.otp-field {
+    width: 80%;
+    max-width: 250px;
+    padding: 12px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.otp-field:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.otp-timer {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Buttons */
+.delivery-button {
+    background: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.delivery-button:hover {
+    background: #0056b3;
+}
+
+/* Success Message */
+.otp-success, .delivery-confirmation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.submit-button {
+    width: 200px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .delivery-detail-container {
+        width: 85%;
+    }
+
+    .otp-field {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .delivery-detail-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .delivery-detail-card {
+        padding: 12px;
+    }
+
+    .delivery-detail-card h2 {
+        font-size: 16px;
+    }
+
+    .otp-field {
+        width: 90%;
+    }
+
+    .delivery-button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .delivery-detail-container {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .delivery-detail-card {
+        padding: 10px;
+    }
+
+    .delivery-detail-card h2 {
+        font-size: 15px;
+    }
+
+    .otp-field {
+        font-size: 14px;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .delivery-button {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .success-message {
+        font-size: 16px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
