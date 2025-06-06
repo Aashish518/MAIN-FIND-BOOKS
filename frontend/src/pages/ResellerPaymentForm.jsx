@@ -90,7 +90,8 @@ export const ResellerPaymentForm = () => {
         credentials: "include",
         headers: {
           authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
+          // Remove Content-Type header to let browser set it to multipart/form-data with boundary
+          // "Content-Type": "application/json",
         },
       });
 
@@ -105,7 +106,8 @@ export const ResellerPaymentForm = () => {
           headers: {
             authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
-          },          body: JSON.stringify({ ...formData, bookid }),
+          },
+          body: JSON.stringify({ ...formData, bookid }),
           credentials: "include",
         });
 
