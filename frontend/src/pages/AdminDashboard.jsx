@@ -29,7 +29,6 @@ import { autoTable } from "jspdf-autotable";
 import { useAlert } from "../Context/AlertContext";
 
 const AdminRoute = ({ children }) => {
-  const token = Cookies.get("token");
   const { user, loading } = useAuth();
   if (loading) {
     return (
@@ -46,6 +45,8 @@ const AdminRoute = ({ children }) => {
   }
 };
 const AdminDashboard = () => {
+  const token = Cookies.get("token");
+
   const [user, getUser] = useState({});
   const [users, setUsers] = useState([]);
   const [bookdata, setBookdata] = useState([]);
