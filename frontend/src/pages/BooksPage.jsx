@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "../components-css/BookCard.css";
+import "../components-css/Bookard.css";
 import Load from "../components/Load";
 import { Bookcard } from "../components/Bookcard";
 import { FilterComponent } from "../components/Filter";
