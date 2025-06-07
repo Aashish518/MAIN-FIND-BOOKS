@@ -7,7 +7,6 @@ import { useAlert } from "../Context/AlertContext";
 import Cookies from "js-cookie";
 
 const DeliverypersonRoute = ({ children }) => {
-  const token = Cookies.get("token");
   const { user, loading } = useAuth();
 
   if (loading) {
@@ -23,6 +22,8 @@ const DeliverypersonRoute = ({ children }) => {
 };
 
 const DeliveryDashboard = () => {
+  const token = Cookies.get("token");
+
   const [orders, setOrders] = useState([]);
   const [user, setUser] = useState([]);
   const [payment, setPayment] = useState([]);

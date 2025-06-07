@@ -58,7 +58,8 @@ export const AdminEditUser = () => {
         headers: {
           authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
-        }, credentials: "include",
+        },
+        credentials: "include",
         body: JSON.stringify({
           userId: user.id, 
           firstname: user.firstName,
@@ -122,7 +123,7 @@ export const AdminEditUser = () => {
             <option value="">Select Role</option>
             <option value="User">User</option>
             <option value="Admin">Admin</option>
-            <option value="DeliveryPerson">DeliveryPerson</option>
+            <option value="Deliveryperson">DeliveryPerson</option>
           </select>
         </div>
 

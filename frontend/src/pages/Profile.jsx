@@ -126,7 +126,7 @@ export const Profile = () => {
                                 )}
                             </div>
                             <h2 className="profile-name">
-                                {user ? `${user.First_name} ${user.Last_name}` : "Guest"}
+                                {user ? `${user.First_name}` : "Guest"}
                             </h2>
                             <p className="profile-role">
                                 {user?.Role || "Guest User"}

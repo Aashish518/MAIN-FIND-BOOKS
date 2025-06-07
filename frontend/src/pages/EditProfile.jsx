@@ -14,8 +14,8 @@ export const EditProfile = () => {
 
   // Initialize form data with received user details
   const [formData, setFormData] = useState({
-    name: userData ? `${userData.First_name} ${userData.Last_name}` : "",
-    email: userData ? userData.Email : "",
+    name: userData ? `${userData.First_name}` : "",
+    // email: userData ? userData.Email : "",
     mobile: userData ? userData.Phone_no || "" : "",
   });
 
@@ -79,7 +79,7 @@ export const EditProfile = () => {
             onChange={handleChange}
           />
         </label>
-        <label>
+        {/* <label>
           Email:
           <input
             type="email"
@@ -87,7 +87,7 @@ export const EditProfile = () => {
             value={formData.email}
             onChange={handleChange}
           />
-        </label>
+        </label> */}
         <label>
           Mobile_no :
           <input
