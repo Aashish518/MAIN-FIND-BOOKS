@@ -49,10 +49,8 @@ export const EditProfile = () => {
         }),
       });
 
-      //console.log("Response status:", response.status);
 
       const result = await response.json();
-      //console.log("API Response:", result);
 
       if (response.ok) {
         showAlert("Profile updated successfully!","success");

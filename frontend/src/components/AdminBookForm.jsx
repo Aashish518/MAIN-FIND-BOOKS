@@ -127,7 +127,6 @@ export const AdminBookForm = ({ UserRole }) => {
         }
 
         const json = await response.json();
-        console.log("API Response:", json);
 
         if (json.book) {
           showAlert("Book Added successfully!", "success");

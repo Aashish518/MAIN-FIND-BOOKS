@@ -13,7 +13,6 @@ export const FilterComponent = ({ books, onFilterChange, subcategory, classOptio
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   useEffect(() => {
-    console.log("FilterComponent props:", { subcategory, classOptions, boardOptions });
     filterBooks();
   }, [condition, priceRange, author, publisher, selectedClass, selectedBoard, subcategory]);
 

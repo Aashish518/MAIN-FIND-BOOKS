@@ -161,8 +161,6 @@ router.get("/Cart", authenticateToken,async (req, res) => {
       const books = await Book.find({ _id: { $in: bookIds } });
 
       res.json({cart,books});
-    //   console.log(cart);
-    //   console.log(books);
     } 
     catch (error) {
       console.error("Error fetching book data:", error);

@@ -65,7 +65,6 @@ export const ViewPayment = () => {
                         {filteredPayments.length > 0 ? (
                             filteredPayments.map((item, index) => (
                                 <tr key={item._id || index}>
-                                    {console.log("pppppp",item)}
                                     <td>
                                         {item.order_id?.User_id?.First_name || "N/A"} {" "}
                                         {item.order_id?.User_id?.Last_name || ""}

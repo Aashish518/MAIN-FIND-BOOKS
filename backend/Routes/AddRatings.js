@@ -8,8 +8,6 @@ router.post('/Ratings', authenticateToken, [
     body('book_id').notEmpty().withMessage('Book ID is required'),
     body('rate').isInt({ min: 1, max: 5 }).withMessage('Rate must be an integer between 1 and 5')
 ], async (req, res) => {
-    console.log("Incoming Request Body:", req.body); // Debugging
-    console.log("User ID from Token:", req.userId); // Debugging
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -20,7 +18,6 @@ router.post('/Ratings', authenticateToken, [
     try {
         const { rate, book_id } = req.body;
         const user_id = req.userId; // Fix extraction of user_id
-        console.log(user_id, book_id);
 
         if (!user_id) {
             return res.status(401).json({ error: "Unauthorized: No user ID found" });

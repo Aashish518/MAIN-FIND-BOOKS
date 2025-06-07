@@ -99,7 +99,6 @@ const AdminDashboard = () => {
           },
         });
         const json = await response.json();
-        console.log("Fetched Orders:", json.orders);
         setOrders(json.orders);
       } catch (error) {
         showAlert("An error occurred. Please try again later.", "error");

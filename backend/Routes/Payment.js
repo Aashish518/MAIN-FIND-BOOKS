@@ -216,7 +216,6 @@ router.put('/:orderId/status', authenticateToken, [
                     for (const payment of payments) {
                         payment.payment_status = "Cancelled";
                         await payment.save();
-                        console.log(`Payment ${payment._id} status updated to Cancelled`);
                     }
                 }
             } catch (err) {

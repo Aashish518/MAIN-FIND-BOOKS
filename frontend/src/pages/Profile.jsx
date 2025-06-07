@@ -30,7 +30,6 @@ export const Profile = () => {
                 });
                 const json = await response.json();
 
-                console.log("Profile API Response:", json);
 
                 if (!json.user) {
                     console.warn("No user data received. Displaying guest mode.");

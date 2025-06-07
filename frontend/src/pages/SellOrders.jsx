@@ -15,7 +15,6 @@ export const SellOrders = () => {
   const { showAlert } = useAlert();
 
 
-  console.log(books, reseller)
   useEffect(() => {
     const getSellOrder = async () => {
       try {

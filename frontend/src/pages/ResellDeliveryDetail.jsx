@@ -118,7 +118,6 @@ export const ResellDeliveryDetail = () => {
                     credentials: 'include',
                 });
 
-                //console.log("payment : ",response);
 
                 if (response.ok) {
                     addpaymentdata();

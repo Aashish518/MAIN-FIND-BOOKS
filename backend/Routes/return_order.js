@@ -36,7 +36,6 @@ const upload = multer({ storage: storage });
 
 router.post('/returnorder', upload.single("image"), async (req, res) => {
   try {
-    console.log('Received file:', req.file);
     const { order_id, reason, additional_info } = req.body;
 
     if (!order_id || !reason) {
@@ -172,7 +171,6 @@ FindBooks Team`;
         subject,
         text,
       });
-      console.log(`Return order status email sent to ${user.Email} for status ${status}`);
     } catch (emailError) {
       console.error('Error sending return order status email:', emailError);
     }

@@ -117,7 +117,6 @@ export const AdminEditBook = ({ UserRole }) => {
         }
 
         const json = await response.json();
-        console.log("API Response:", json);
 
         if (json.book) {
           showAlert("Book Updated successfully!", "success");

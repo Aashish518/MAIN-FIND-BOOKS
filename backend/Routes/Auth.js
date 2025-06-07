@@ -17,7 +17,6 @@ const transporter = nodemailer.createTransport({
   auth: { user: process.env.MY_EMAIL.trim(), pass: process.env.EMAIL_PASSWORD.trim() }
 });
 
-console.log("user : ",process.env.MY_EMAIL, "pass : ",process.env.EMAIL_PASSWORD )
 
 transporter.verify(function(error, success) {
   if (error) {
@@ -270,7 +269,6 @@ router.post(
       const authtoken = jwt.sign(data, JsonSecretKey);
       success = true;
 
-      console.log("token: ", authtoken);
       res.json({ success, authtoken, user });
     } catch (error) {
       console.error(error.message);
@@ -367,14 +365,12 @@ router.put(
       if (email) updatedData.Email = email;
       if (mobile) updatedData.Phone_no = mobile;
       if (password) {
-        console.log("Hashing password for user:", userId);
         updatedData.Password = await bcrypt.hash(password, 10);
       }
       if (role) {
         updatedData.Role = role;
       }
 
-      console.log("Updating user with data:", updatedData);
 
       const updatedUser = await User.findOneAndUpdate(
         { _id: userId },

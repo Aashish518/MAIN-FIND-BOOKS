@@ -11,7 +11,6 @@ export const AdminEditUser = () => {
   const { User } = location.state || {}; // Extract User object from location state
     const {showAlert} = useAlert();
 
-  console.log("User received in Edit Page:", User); // Debugging
 
   // Initialize user state with received data (or empty fields if not found)
   const [user, setUser] = useState({
@@ -45,7 +44,6 @@ export const AdminEditUser = () => {
   const editUser = async (e) => {
     e.preventDefault();
   
-    console.log("Submitting User Data:", user); // ✅ Check the final state before sending
   
     if (!user.id) {
       showAlert("User ID is missing. Cannot update.","error");
@@ -70,10 +68,8 @@ export const AdminEditUser = () => {
         }),
       });
   
-      //console.log("Response status:", response.status);
   
       const result = await response.json();
-      //console.log("API Response:", result);
   
       if (response.ok) {
         showAlert("User updated successfully!","success");

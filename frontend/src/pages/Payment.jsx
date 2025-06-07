@@ -111,7 +111,6 @@ export const Payment = () => {
         credentials: "include",
       });
 
-      console.log(cartDatas);
 
       if (!response.ok) throw new Error("Failed to update quantity");
       clearcart();

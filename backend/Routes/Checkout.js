@@ -83,7 +83,6 @@ router.get("/Order", Authmid, async (req, res) => {
 
     // Extract book IDs from orders
     const bookIds = orders.flatMap((c) => c.books.map((b) => b.book_id));
-    console.log("Book IDs:", bookIds);
     if (bookIds.length === 0) {
       return res.json({ orders, books: [] });
     }
@@ -102,7 +101,6 @@ router.get("/Order", Authmid, async (req, res) => {
       .map((id) => bookMap.get(id.toString()))
       .filter(Boolean);
 
-    console.log("Books found:", books);
 
     res.json({ orders, books });
   } catch (error) {

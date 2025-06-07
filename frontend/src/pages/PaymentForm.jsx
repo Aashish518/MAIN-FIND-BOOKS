@@ -60,11 +60,7 @@ export const PaymentForm = () => {
       }
     }
 
-    console.log("Payment Details:", {
-      paymentMethod,
-      onlinePaymentMethod,
-      ...formData,
-    });
+   
     showAlert("Payment Successful!","error");
   };
 

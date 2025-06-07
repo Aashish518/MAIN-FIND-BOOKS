@@ -59,7 +59,6 @@ export const AdminAddUser = () => {
 
     if (!validateForm()) return;
 
-    console.log("User Data Submitted:", user);
 
     try {
       const response = await fetch(`${import.meta.env.VITE_BACK_URL}/api/User`, {

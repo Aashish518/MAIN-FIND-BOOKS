@@ -157,7 +157,6 @@ export const Book = () => {
               "Content-Type": "application/json",
             },
           });
-          console.log(`Deleted reseller book: ${book.BookName}`);
         } catch (error) {
           console.error("Delete error:", error);
         }
